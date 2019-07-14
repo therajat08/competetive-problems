@@ -3,6 +3,7 @@
 #include <vector>
 #include <iostream>
 #include <algorithm>
+#include <bits/stdc++.h>
 using namespace std;
 
 
@@ -34,14 +35,17 @@ int main() {
     for(i=0;i<querryContainer.size();i++)
     {
         querryPosition = lower_bound(vect.begin(),vect.end(),querryContainer.at(i));
-        if(querryContainer.at(i) == querryPosition)
+        //cout << querryPosition-vect.begin();
+       if(querryContainer.at(i) == vect.at(  (querryPosition-vect.begin())-1 ) )
            {
-               printf("Yes %d\n",querryPosition.));
+               cout << "Yes " << querryPosition-vect.begin()<<endl;
            }
         else
             {
-                printf("No %d\n",querryPosition+2);
+
+                cout << "No " << (querryPosition-vect.begin())+2<<endl;
             }
+
     }
 
     return 0;
