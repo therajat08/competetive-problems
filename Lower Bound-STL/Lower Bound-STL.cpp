@@ -35,15 +35,17 @@ int main() {
     for(i=0;i<querryContainer.size();i++)
     {
         querryPosition = lower_bound(vect.begin(),vect.end(),querryContainer.at(i));
+        //cout << "\nquerry position contains " << querryPosition-vect.begin();
+        //querryPosition storing the index of querry from vect
         //cout << querryPosition-vect.begin();
-       if(querryContainer.at(i) == vect.at(  (querryPosition-vect.begin())-1 ) )
+       if(querryContainer.at(i) == vect.at(  (querryPosition-vect.begin()) ) )
            {
-               cout << "Yes " << querryPosition-vect.begin()<<endl;
+               cout << "Yes " << querryPosition-vect.begin()+1<<endl;
            }
         else
             {
 
-                cout << "No " << (querryPosition-vect.begin())+2<<endl;
+                cout << "No " << (querryPosition-vect.begin())+1<<endl;
             }
 
     }
