@@ -3,9 +3,11 @@
 using namespace std;
 
 // Complete the hourglassSum function below.
-int hourglassSum(vector<vector<int>> arr) {
+int hourglassSum(vector<vector<int> > arr) {
     int a=12;
 
+
+    printf("%d",arr[0][1]);
     return a;
 }
 
@@ -13,7 +15,7 @@ int main()
 {
     ofstream fout(getenv("OUTPUT_PATH"));
 
-    vector<vector<int>> arr(6);
+    vector<vector<int> > arr(6);
     for (int i = 0; i < 6; i++) {
         arr[i].resize(6);
 
