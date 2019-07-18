@@ -4,11 +4,49 @@ using namespace std;
 
 // Complete the hourglassSum function below.
 int hourglassSum(vector<vector<int> > arr) {
-    int a=12;
+    int i,j;
+    int k=0,l=0;
+    int positionInGlass=0;//position 4 and 6 will be ignored
+    int sum=0;
+    int sumArray[16],sumArrayIndex=0;
+    int test=0;
 
+    for(i=0 ; i<4;i++)
+    {
+        for(j=0; j<4 ;j++)
+        {
+            for(k = i;k<=i+2;k++)
+               {
+                   for(l=j; l<=j+2  ;  l++)
+                   {
+                       positionInGlass++;
 
-    printf("%d",arr[0][1]);
-    return a;
+                       if(positionInGlass!=4 && positionInGlass!=6)
+                       {
+                           sum+= arr[k][l];
+                           //test++;
+                       }
+                        printf("[%d][%d]\n",k,l);
+                   }
+
+               }
+            sumArray[sumArrayIndex] = sum;
+            printf("%d",sum);
+            sum=0;
+            sumArrayIndex++;
+            printf("**************end of a glass*****************");
+            printf("******************hour glass index[%d][%d]\n",i,j);
+
+        }
+
+    }
+    /*for(i=0;i<16;i++)
+    {
+        printf("\n[%d ] : %d",i,sumArray[i]);
+    }*/
+    int* max =max_element(sumArray,sumArray+15);
+   printf("max is %d",*max);
+    return *max;
 }
 
 int main()
