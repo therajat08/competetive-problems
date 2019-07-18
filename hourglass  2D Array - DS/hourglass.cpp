@@ -9,7 +9,7 @@ int hourglassSum(vector<vector<int> > arr) {
     int positionInGlass=0;//position 4 and 6 will be ignored
     int sum=0;
     int sumArray[16],sumArrayIndex=0;
-    int test=0;
+
 
     for(i=0 ; i<4;i++)
     {
@@ -24,27 +24,28 @@ int hourglassSum(vector<vector<int> > arr) {
                        if(positionInGlass!=4 && positionInGlass!=6)
                        {
                            sum+= arr[k][l];
-                           //test++;
+
                        }
-                        printf("[%d][%d]\n",k,l);
+                        //printf("[%d][%d]\n",k,l);
                    }
 
                }
             sumArray[sumArrayIndex] = sum;
-            printf("%d",sum);
+            //printf("%d",sum);
             sum=0;
             sumArrayIndex++;
-            printf("**************end of a glass*****************");
-            printf("******************hour glass index[%d][%d]\n",i,j);
+            positionInGlass=0;
+            //printf("**************end of a glass*****************");
+            //printf("******************hour glass index[%d][%d]\n",i,j);
 
         }
 
     }
-    /*for(i=0;i<16;i++)
+   /* for(i=0;i<16;i++)
     {
         printf("\n[%d ] : %d",i,sumArray[i]);
     }*/
-    int* max =max_element(sumArray,sumArray+15);
+    int* max =max_element(sumArray,sumArray+16);
    printf("max is %d",*max);
     return *max;
 }
