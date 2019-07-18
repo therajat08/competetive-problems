@@ -10,7 +10,7 @@ string catAndMouse(int x, int y, int z) {
     int catADistance=0;
     int catBDistance=0;
     string result;
-    catADistance = abs(y-x);
+    catADistance = abs(z-x);
     catBDistance = abs(z-y);
 
     if(catADistance>catBDistance)

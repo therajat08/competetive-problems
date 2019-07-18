@@ -46,7 +46,7 @@ int hourglassSum(vector<vector<int> > arr) {
         printf("\n[%d ] : %d",i,sumArray[i]);
     }*/
     int* max =max_element(sumArray,sumArray+16);
-   printf("max is %d",*max);
+   //printf("max is %d",*max);
     return *max;
 }
 
