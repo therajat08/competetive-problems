@@ -7,6 +7,26 @@ vector<string> split_string(string);
 // Complete the catAndMouse function below.
 string catAndMouse(int x, int y, int z) {
 
+    int catADistance=0;
+    int catBDistance=0;
+    string result;
+    catADistance = abs(y-x);
+    catBDistance = abs(z-y);
+
+    if(catADistance>catBDistance)
+    {
+        result="Cat B";
+    }
+    else if(catADistance<catBDistance)
+    {
+        result="Cat A";
+    }
+    else
+    {
+        result="Mouse C";
+    }
+
+    return result;
 
 }
 
