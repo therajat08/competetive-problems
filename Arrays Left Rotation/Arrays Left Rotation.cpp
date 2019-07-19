@@ -17,15 +17,15 @@ vector<int> rotLeft(vector<int> a, int d) {
 
     for(j=1; j<=d;j++)
     {
-        rotationStorage = a[vectSize-1];
-        for(i=vectSize-1;i>0;i--)
+        rotationStorage = a[0];
+        for(i=0;i<vectSize-1;i++)
         {
 
-                a[i] = a[i-1];
+                a[i] = a[i+1];
 
 
         }
-        a[0] = rotationStorage;
+        a[vectSize-1] = rotationStorage;
         for(i=0;i<vectSize;i++)
         {
          cout << a.at(i) << " ";
