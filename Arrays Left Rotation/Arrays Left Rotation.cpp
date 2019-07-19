@@ -26,11 +26,11 @@ vector<int> rotLeft(vector<int> a, int d) {
 
         }
         a[vectSize-1] = rotationStorage;
-        for(i=0;i<vectSize;i++)
+        /*for(i=0;i<vectSize;i++)
         {
          cout << a.at(i) << " ";
 
-        }
+        }*/
         printf("\n");
 
     }
