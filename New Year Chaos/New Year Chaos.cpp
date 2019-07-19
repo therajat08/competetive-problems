@@ -9,22 +9,25 @@ void minimumBribes(vector<int> q) {
 
     int i;
     int bribeCount=0;
+    int flag;//flag=0 means too chaotic and printing bribe wont be done
 
     for(i=0;i<q.size();i++)
     {
         cout << q.at(i);
         printf("\n");
     }
-    printf("******end of a queue************");
+    printf("\n******end of a queue************\n");
 
-   /* for(i=0;i<q.size();i++)
+    for(i=0;i<q.size();i++)
     {
-
+        flag=1;
         if((q[i] - (i+1)) > 0)//testing if person is getting ahead in line(+ve difference)
         {
             if((q[i] - (i+1)) > 2)//testing if it is more than 2 i.e chaotic
             {
                 printf("Too chaotic");
+                flag=0;
+                break;
             }
             else
             {
@@ -32,8 +35,12 @@ void minimumBribes(vector<int> q) {
             }
         }
     }
-    printf("%d",bribeCount);
-*/
+    if(flag!=0)
+    {
+            printf("%d",bribeCount);
+    }
+
+
 }
 
 int main()
