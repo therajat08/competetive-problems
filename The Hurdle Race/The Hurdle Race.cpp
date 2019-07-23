@@ -8,16 +8,26 @@ vector<string> split_string(string);
 int hurdleRace(int k, vector<int> height) {
 
     int i;
-    int magicPotion=0;
-    maxHeight=0;
+    //int magicPotion=0;
+    int maxHeight=0;
 
     for(i=0;i<height.size();i++)
     {
         if(maxHeight<height.at(i))
         {
-
+            maxHeight = height.at(i);
         }
     }
+    if((maxHeight - k)<=0)
+    {
+        return 0;
+    }
+    else
+    {
+
+        return (maxHeight - k);
+    }
+
 
 }
 
