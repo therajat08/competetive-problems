@@ -15,7 +15,14 @@ vector<string> split(const string &);
  *  2. 2D_INTEGER_ARRAY queries
  */
 
-vector<int> dynamicArray(int n, vector<vector<int>> queries) {
+vector<int> dynamicArray(int n, vector<vector<int> > queries) {
+
+    vector<int> vect;
+
+
+
+
+return vect;
 
 }
 

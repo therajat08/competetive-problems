@@ -10,15 +10,16 @@ int utopianTree(int n) {
 
     for(i=1;i<=n;i++)
     {
-        if(i%2 != 0)
+        if(i%2 != 0)//spring : height doubles
+        {
+            height = height*2;
+
+        }
+        else//summer : height increases by 1
         {
             height++;
         }
-        else
-        {
-            height = height*2;
-        }
-        printf("******height %d***********\n",height);
+       // printf("******height %d***********\n",height);
     }
     return height;
 
