@@ -4,13 +4,15 @@ using namespace std;
 
 int main(){
 
-    int lastAnswer = 0;
-    int numberOfSequences = 0;
-    int numberOfQuerries=0;
-    int i;
-    int typeOfQuerry,x,y; // a querry parts
-    int index;
+    long lastAnswer = 0;
+    long numberOfSequences = 0;
+    long numberOfQuerries=0;
+    long i;
+    long typeOfQuerry,x,y; // a querry parts
+    int index,flag=2;
     vector<vector<int> > vect;
+    vector<int>::iterator it;
+    vector<int> rowCreated;
 
 
     cin >> numberOfSequences;
@@ -25,17 +27,46 @@ int main(){
         //printf("%d",(x^lastAnswer)%numberOfSequences);
         //printf("here 4********");
         index = (x^lastAnswer)%numberOfSequences;
-        //items.push_back(vector<int>());
+        it = find (rowCreated.begin(), rowCreated.end(), index);
+        if (it == rowCreated.end())
+       {
+            vect.push_back(vector<int>());
+       }
+
+        //printf("here 5********");
+        /*if(index == 0 && rowCreated>0)
+        {
+            if(flag!=1)
+                {
+
+                    flag = 1;
+                    vect.push_back(vector<int>());
+                    rowCreated--;
+                }
+
+        }
+        else if(index == 1 && rowCreated>0)
+        {
+            if(flag!=0)
+            {
+                flag = 0;
+                vect.push_back(vector<int>());
+                rowCreated--;
+            }
+        }*/
+
+
+
         if(typeOfQuerry==1)
         {
-            vect.push_back(vector<int>());
+
             //printf("here 1********");
             vect[index].push_back(y);
             //printf("here 2********");
         }
         else if(typeOfQuerry==2)
         {
-            vect.push_back(vector<int>());
+
             vect[index].push_back(y);
             lastAnswer = vect[(x ^ lastAnswer)%numberOfSequences][y];
             printf("%d\n",lastAnswer);
