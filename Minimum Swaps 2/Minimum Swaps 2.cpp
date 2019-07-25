@@ -10,6 +10,7 @@ int main() {
     int sizeOfVector;
     int swapCount=0;
     int i,y;
+
     vector<int> sortThis;
     vector<int>::iterator it; //to find position of a value in vector
 
@@ -30,16 +31,20 @@ int main() {
         if(sortThis[i]!=y)
         {
             //swapping
-            sortThis[it - sortThis.begin() + 1] = sortThis[i];//it - sortThis.begin() + 1 -> j's position in vector
+            sortThis[it - sortThis.begin() ] = sortThis[i];//it - sortThis.begin() + 1 -> j's position in vector
             sortThis[i] = y;
+            //temp=sortThis[i];
+            //sortThis[i]=j;
+            //sortThis[it - sortThis.begin() + 1]
             swapCount++;
-            printf("\n*****vector now********\n");
+            /*printf("\n*****vector now********\n");
             for(int p=0;p<sizeOfVector;p++)//for debugging
             {
                 printf("%d\n",sortThis.at(p));
             }
             printf("****swapcount: %d \n",swapCount);
             printf("\n*****vector end********\n");
+            */
         }
     }
     printf("%d",swapCount);
