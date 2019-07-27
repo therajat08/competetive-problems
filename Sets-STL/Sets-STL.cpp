@@ -38,11 +38,11 @@ int main() {
             it = firstEverSet.find(x);
             if(it!=firstEverSet.end())
             {
-                printf("Yes");
+                printf("Yes\n");
             }
             else
             {
-                printf("No");
+                printf("No\n");
             }
         }
     }
