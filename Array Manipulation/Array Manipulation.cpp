@@ -4,20 +4,19 @@ using namespace std;
 
 int main()
 {
-    unsigned long int numberOfQuerries;
+    long int numberOfQuerries;
+    long int sizeOfArray;
+     long int i,j,sum=0;
+    long int initialPosition,finalPosition,newValue;
+    long int *maxElement;
 
-    unsigned long int sizeOfArray;
-    unsigned long int i,j,k;
-    unsigned long int initialPosition,finalPosition,newValue;
-    unsigned long int *maxElement;
-
-
+    long maximum=0;
 
     cin >> sizeOfArray;
     cin >> numberOfQuerries;
 
-    unsigned long int *arr =new unsigned long int[sizeOfArray];
-    for(i=0;i<sizeOfArray;i++)//initializing array
+     long int *arr =new long int[sizeOfArray+2];
+    for(i=0;i<sizeOfArray+2;i++)//initializing array
     {
         arr[i] = 0;
     }
@@ -28,14 +27,12 @@ int main()
         cin >> finalPosition;
         cin >> newValue;
 
-        for(j=initialPosition-1;j<=finalPosition-1;j++)
-            {
-                arr[j] = 1LL*arr[j]+newValue;
-            }
-           /*for (int k = 0; k < sizeOfArray; k++)
+       arr[initialPosition]+= newValue;
+       arr[finalPosition+1]-= newValue;
+
+
+       /*for (int k = 0; k < sizeOfArray+2; k++)
            {
-
-
                 cout << ' ' << arr[k];
            }
            cout << '\n';*/
@@ -43,10 +40,17 @@ int main()
     }
 
 
+    for(i=0;i<sizeOfArray+2;i++)
+    {
+        sum+=arr[i];
+        maximum = max(maximum,sum);
+    }
 
 
-    maxElement = max_element(arr,arr+sizeOfArray);
-    printf("%d",*maxElement);
+
+
+    //maxElement = max_element(arr,arr+sizeOfArray);
+   cout << maximum;
 
     return 0;
 }
