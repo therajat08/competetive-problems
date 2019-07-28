@@ -1,0 +1,4 @@
+Will sort the given array first and then iterate through it to find
+the max num of toys that can be bought.
+
+Sorting algo used : quick sort
