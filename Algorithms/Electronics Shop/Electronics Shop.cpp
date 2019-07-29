@@ -55,7 +55,7 @@ int main()
             if(maxSpent<=(keyboards[low]+usbs[up]))
             {
                 maxSpent = (keyboards[low]+usbs[up]);
-                cout << maxSpent << "max spent" << endl;
+                //cout << maxSpent << "max spent" << endl;
             }
         }
 
@@ -70,7 +70,10 @@ int main()
 
 
     }
-    cout << maxSpent;
+    if(maxSpent!=0)
+        cout << maxSpent;
+    else
+        cout << "-1";
 
     return 0;
 }
