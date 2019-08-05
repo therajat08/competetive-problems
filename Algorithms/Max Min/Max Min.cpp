@@ -20,7 +20,7 @@ int main()
         vector<int> items;
         int i,j;
 
-        int minimum,maximum;
+        int result = INT_MAX;
         cin >> numberOfItems;
         cin >> rangeOfItems;
 
@@ -32,10 +32,15 @@ int main()
 
         sort(items.begin(),items.end());
 
-       printVector(items);
+       //printVector(items);
 
-        cout << (*max_element(items.begin(),items.begin()+rangeOfItems) - *min_element(items.begin(),items.begin()+rangeOfItems));
+        for(i=0;i<=numberOfItems-rangeOfItems;i++)
+        {
+            result = min(result,items[i+rangeOfItems-1]-items[i]);
+            //cout <<items[i+rangeOfItems-1]<< " "<< items[i]<<" "<<result << endl;
 
+        }
+        cout << result;
 
         return 0;
 }
