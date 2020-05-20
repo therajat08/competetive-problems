@@ -1,1 +1,1 @@
-# This repository contains the hackerrank challenges(most of them) solved by me
+# This repository contains the competetive problems solved by me
