@@ -1,1 +1,0 @@
-writing my own code from scratch not completing given code. input taking into a 2d vector cos the number of querries isnt known at compile time. "replace" method will be use to replace a range of values of aarray at once.

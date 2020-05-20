@@ -1,4 +1,0 @@
-sorted the given arrays. then used an modified version of algo 
-given in : https://www.geeksforgeeks.org/given-two-sorted-arrays-number-x-find-pair-whose-sum-closest-x/
-
-this solves the querry in linear time
