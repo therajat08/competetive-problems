@@ -6,7 +6,7 @@ void findPrime(int n)
   bool arr[n+1];
   memset(arr, true, sizeof(arr));
 
-  for(int p=2;p*p<=n;p++)
+  for(int p=2;(long long)p*p<=n;p++)
   {
     if(arr[p])
     {
