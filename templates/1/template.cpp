@@ -21,9 +21,11 @@
 #define sl(a) scanf("%lld", &a)
 #define sll(a,b) scanf("%lld %lld", &a, &b)
 
-typedef vi vector<int>;
+
 
 using namespace std;
+
+typedef vector<int> vi;
 
 int main()
 {
