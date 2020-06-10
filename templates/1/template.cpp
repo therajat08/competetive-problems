@@ -14,6 +14,9 @@
 #define loop(i,a,b) for (int i = a; i < b; i++)
 
 #define printVeci(v) for(int i = 0; i < v.size(); i++) {cout << v[i] << endl;} 
+#define printAri(v,s) for(int i = 0; i < s; i++) {cout << v[i] << endl;} 
+#define co(a) cout << a << endl;
+#define coo(a,b) cout << a << " " << b << " " << endl;
 
 #define si(a) scanf("%d", &a)
 #define sii(a,b) scanf("%d %d", &a, &b)
