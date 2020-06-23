@@ -11,27 +11,34 @@
 #include <map>
 #include <unordered_map>
 
-#define loop(i,a,b) for (int i = a; i < b; i++)
+#define loop(i, a, b) for (int i = a; i < b; i++)
 
-#define printVeci(v) for(int i = 0; i < v.size(); i++) {cout << v[i] << endl;} 
-#define printAri(v,s) for(int i = 0; i < s; i++) {cout << v[i] << endl;} 
+#define printVeci(v)                   \
+    for (int i = 0; i < v.size(); i++) \
+    {                                  \
+        cout << v[i] << endl;          \
+    }
+#define printAri(v, s)          \
+    for (int i = 0; i < s; i++) \
+    {                           \
+        cout << v[i] << endl;   \
+    }
 #define co(a) cout << a << endl;
-#define coo(a,b) cout << a << " " << b << " " << endl;
+#define coo(a, b) cout << a << " " << b << " " << endl;
 
 #define si(a) scanf("%d", &a)
-#define sii(a,b) scanf("%d %d", &a, &b)
-#define siii(a,b,c) scanf("%d %d %d", &a, &b, &c)
+#define sii(a, b) scanf("%d %d", &a, &b)
+#define siii(a, b, c) scanf("%d %d %d", &a, &b, &c)
 #define sl(a) scanf("%lld", &a)
-#define sll(a,b) scanf("%lld %lld", &a, &b)
-
-
+#define sll(a, b) scanf("%lld %lld", &a, &b)
 
 using namespace std;
 
 typedef vector<int> vi;
+typedef long long  ll;
 
 int main()
 {
-    
+
     return 0;
 }
