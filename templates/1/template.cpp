@@ -29,6 +29,8 @@
 #define si(a) scanf("%d", &a)
 #define sii(a, b) scanf("%d %d", &a, &b)
 #define siii(a, b, c) scanf("%d %d %d", &a, &b, &c)
+#define siiii(a, b, c, d) scanf("%d %d %d %d", &a, &b, &c, &d);
+
 #define sl(a) scanf("%lld", &a)
 #define sll(a, b) scanf("%lld %lld", &a, &b)
 
